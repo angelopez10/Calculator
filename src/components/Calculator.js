@@ -149,14 +149,13 @@ const Calculator = ({ initialValue }) => {
     }
   };
 
-  console.log(result, prevNumber, operator);
 
   return (
     <>
       <StyledCalculator>
         <StyledHeader>Calculator</StyledHeader>
         <StyledResult prevResult>{prevNumber}</StyledResult>
-        <StyledResult>{commafy(result)}</StyledResult>
+        <StyledResult >{commafy(result)}</StyledResult>
         <ButtonPosition>
           <Button
             onButtonClick={handleButtonClick}
