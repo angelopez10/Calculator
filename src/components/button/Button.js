@@ -1,9 +1,7 @@
 import React from "react";
-import StyledButton from './StyledButton';
+import StyledButton from "./StyledButton";
 
-
-const Button = ({content, type, onButtonClick}) => {
-
+const Button = ({ content, type, onButtonClick }) => {
   return (
     <StyledButton
       zero={content === "0" ? "zero" : ""}

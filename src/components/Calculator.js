@@ -7,11 +7,10 @@ import StyledResult from "./styles/StyledResult";
 import StyledFooter from "./styles/StyledFooter";
 import ButtonPosition from "./button/ButtonPosition";
 
-
-const Calculator = ({initialValue}) => {
+const Calculator = ({ initialValue }) => {
   const [result, setResult] = useState(initialValue);
   // This hook ↓ is used to store the previous number when doing an operation
-  const [prevNumber, setPrevNumber] = useState('0');
+  const [prevNumber, setPrevNumber] = useState("0");
   // This hook ↓ is used to keep track of what operator is being used
   const [operator, setOperator] = useState(null);
 
@@ -135,12 +134,15 @@ const Calculator = ({initialValue}) => {
       } else if (operator === "÷") {
         setResult((prevNumber / parseFloat(result)).toString());
       }
-      setPrevNumber('0');
+      setPrevNumber("0");
       setOperator(null);
       return;
     }
 
-    if (result[result.length - 1] === "." || result[result.length - 1] === '0') {
+    if (
+      result[result.length - 1] === "." ||
+      result[result.length - 1] === "0"
+    ) {
       setResult(result + content);
     } else {
       setResult(parseFloat(number + content).toString());

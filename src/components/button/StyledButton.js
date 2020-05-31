@@ -11,6 +11,7 @@ const StyledButton = styled.div`
   justify-content: center;
   width: 60px;
   transition: filter 0.3s ease-in;
+  user-select: none;
   
   :active, :focus {
     filter: brightness(120%);
@@ -23,8 +24,7 @@ const StyledButton = styled.div`
   grid-column: 1 / span 2;
   border-radius: 57.5px;
   position: relative;
-  justify-content: flex-start;
-  padding-left: 43px;
+  justify-content: center;
     `}
 
 ${(props) =>
