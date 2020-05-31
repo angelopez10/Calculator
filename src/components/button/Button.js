@@ -1,5 +1,5 @@
 import React from "react";
-import StyledButton from './styles/StyledButton';
+import StyledButton from './StyledButton';
 
 
 const Button = ({content, type, onButtonClick}) => {
@@ -10,6 +10,7 @@ const Button = ({content, type, onButtonClick}) => {
       operator={type === "operator" ? "operator" : ""}
       function={type === "function" ? "function" : ""}
       onClick={onButtonClick(content)}
+      data-testid="button"
     >
       {content}
     </StyledButton>

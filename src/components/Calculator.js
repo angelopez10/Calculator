@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import commafy from "./utils/commafy";
-import Button from "./Button";
+import Button from "./button/Button";
 import StyledCalculator from "./styles/StyledCalculator";
 import StyledHeader from "./styles/StyledHeader";
 import StyledResult from "./styles/StyledResult";
 import StyledFooter from "./styles/StyledFooter";
-import ButtonPosition from "./styles/ButtonPosition";
+import ButtonPosition from "./button/ButtonPosition";
 
 
 const Calculator = ({initialValue}) => {
@@ -35,7 +35,7 @@ const Calculator = ({initialValue}) => {
     //Conditional statement that calculates percentage
     if (content === "%") {
       setResult((number / 100).toString());
-      setPrevNumber(null);
+      setPrevNumber("0");
       setOperator(null);
       return;
     }
